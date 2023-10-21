@@ -36,7 +36,7 @@ class Register(generics.CreateAPIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-    def perform_create(self, serializer):
-        instance = serializer.save()
-        status = send_verification_email(instance.email)
-        return instance
+    # def perform_create(self, serializer):
+    #     instance = serializer.save()
+    #     status = send_verification_email(instance.email)
+    #     return instance
