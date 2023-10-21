@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'track_xpress_app',
     'rest_framework',
     'rest_framework.authtoken',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
@@ -52,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'track_xpress.urls'
@@ -73,7 +75,10 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'track_xpress.wsgi.application'
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
 
+]
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases

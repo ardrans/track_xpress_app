@@ -22,7 +22,7 @@ class Register(generics.CreateAPIView):
         hashed_password = hashlib.md5(password.encode()).hexdigest()
 
         generated_otp = '123456'
-        redis_util.set_value(phone_number, generated_otp)
+        #redis_util.set_value(phone_number, generated_otp)
 
 
         if Drivers.objects.filter(email=email).exists():
