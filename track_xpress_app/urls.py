@@ -11,5 +11,4 @@ urlpatterns = [
     path('customers/<int:pk>/', customer_management.UpdateDeleteCustomers.as_view(), name='customers'),
     path('list_customers/', customer_management.ListCustomers.as_view(), name='list_customers'),
     path('logout/', logout.Logout.as_view(), name='logout'),
-
 ]

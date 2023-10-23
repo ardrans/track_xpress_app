@@ -111,7 +111,7 @@ const Signup = () => {
         <div className="mb-3">
           <label htmlFor="email" className="form-label">Phone Number</label>
           <input
-            type="text"
+            type="number"
             className="form-control"
             id="phone_number"
             name="phone_number"

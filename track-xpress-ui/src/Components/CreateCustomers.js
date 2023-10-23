@@ -46,9 +46,9 @@ function AddCustomer() {
 
   return (
     <div style={{display: 'flex', justifyContent:'center', alignItems:'center'}}>
-        <Card bg="info" style={{width: "500px", perspective:"1000px"}}>
-        <Card.Header><h2>Add Customer</h2></Card.Header>
-        <Card.Body>
+    <Card bg="info" style={{width: "500px", perspective:"1000px"}}>
+    <Card.Header><h2>Add Customer</h2></Card.Header>
+    <Card.Body>
       <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="name" className="form-label">Name:</label>
@@ -60,18 +60,18 @@ function AddCustomer() {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="phone_number" className="form-label">Phone Number:</label>
+          <label htmlFor="phonenumber" className="form-label">Phone Number:</label>
           <input
-            type="text"
-            name="phone_number"
-            value={customerData.phone_number}
+            type="number"
+            name="phonenumber"
+            value={customerData.phonenumber}
             onChange={handleChange}
           />
         </div>
         <div className="mb-3">
           <label htmlFor="latitude" className="form-label">Lattitude:</label>
           <input
-            type="text"
+            type="float"
             name="latitude"
             value={customerData.latitude}
             onChange={handleChange}
@@ -80,7 +80,7 @@ function AddCustomer() {
         <div className="mb-3">
           <label htmlFor="longitude" className="form-label">Longitude:</label>
           <input
-            type="text"
+            type="float"
             name="longitude"
             value={customerData.longitude}
             onChange={handleChange}
