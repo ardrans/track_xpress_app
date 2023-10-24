@@ -7,6 +7,7 @@ import Login from './Components/Login';
 import Logout from './Components/Logout';
 import AddCustomer from './Components/CreateCustomers';
 import DashBoard from './Components/DashBoard';
+import OTPVerification from './Components/Otp';
 
 const App = () => {
 
@@ -27,6 +28,7 @@ const App = () => {
               <Route path="/add-customers" element={<AddCustomer />}/>
               <Route path="/logout" element={<Logout />}/>
               <Route path="/dashboard" element={<DashBoard />}/>
+              <Route path="/otp" element={<OTPVerification />}/>
             </Routes>
             </nav>
         </div>

@@ -53,7 +53,7 @@ class Migration(migrations.Migration):
                 ('latitude', models.DecimalField(decimal_places=6, max_digits=9)),
                 ('longitude', models.DecimalField(decimal_places=6, max_digits=9)),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('driver_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='track_xpress_app.drivers')),
+                ('driver_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='track_xpress_api.drivers')),
             ],
         ),
     ]

@@ -41,7 +41,7 @@ const Signup = () => {
     try {
         const response = await axios.post(`${config.apiUrl}/api/register/`, user);
         console.log('Registration successful:', response.data);
-        history('/login');
+        history('/otp');
     } catch (error) {
         if (error.response.data.error === "Email already exists") {
             toast.error("Email already registered with us.");
