@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'track_xpress_api',
+    'track_xpress_app',
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
@@ -86,7 +86,7 @@ CORS_ALLOWED_ORIGINS = [
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'track_xpress_api',
+        'NAME': 'track_xpress_app',
         'USER': 'root',
         'PASSWORD': 'root',
         'HOST': 'localhost',
@@ -138,10 +138,10 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 AUTHENTICATION_BACKENDS = [
-    'track_xpress_api.authentication_backends.CustomAuthenticationBackend',
+    'track_xpress_app.authentication_backends.CustomAuthenticationBackend',
     'django.contrib.auth.backends.ModelBackend',
 ]
-AUTH_USER_MODEL = 'track_xpress_api.Drivers'
+AUTH_USER_MODEL = 'track_xpress_app.Drivers'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
